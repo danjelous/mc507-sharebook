@@ -36,3 +36,69 @@ This section contains links to all relevant project artefacts. For the last two 
 * Code is living in `src`
 * [Project Video](https://www.youtube.com/embed/gGOXMWGVwDg)
 * [Project Poster](documents/poster.pdf)
+
+## Using this project
+
+After checkout of the project run
+
+```bash
+$ npm install
+$ bower install
+```
+
+to install third party dependencies.
+If cordova-specific errors occur, install cordova and ionic separately and globally on your machine:
+
+```bash
+$ sudo npm install -g cordova
+$ sudo npm install -g ionic
+```
+
+Then add specific platforms:
+
+```bash
+$ ionic platform add ios
+$ ionic platform add android
+```
+
+To build execute following commands:
+
+```bash
+$ ionic build ios
+$ ionic build android
+```
+
+To emulate on a platform run following commands:
+
+```bash
+$ ionic emulate ios
+$ ionic emulate android
+```
+
+To start the web-view, run
+
+```bash
+$ ionic serve
+```
+
+To get ios and android in comparison in the webview, run
+
+```bash
+$ ionic serve --lab
+```
+
+## Install app in iOS
+
+To install the app on iOS, switch to the folder /platforms/ios and open the xcode-Project.
+
+## Issues
+If Android is not installed:
+
+```bash
+npm install android
+```
+
+## Ressources
+
+http://ionicframework.com/docs/cli/ -- CLI Beschreibung.
+http://ionicframework.com/docs/components/ -- Components
