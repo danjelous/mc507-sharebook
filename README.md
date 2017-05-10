@@ -63,11 +63,13 @@ To start the web-view, run
 $ ionic serve
 ```
 
-To get ios and android in comparison in the webview, run
+To get ios and android in comparison in the webview run
 
 ```bash
-$ ionic serve --lab
+$ ionic serve -l
 ```
+
+Be sure to tick the boxes in the right upper corner under `Platforms`!
 
 ### Install app on iOS
 
