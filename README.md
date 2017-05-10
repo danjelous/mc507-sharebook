@@ -6,7 +6,7 @@ Description: This is a short description on what your project is about. Goals/ t
 
 Used technology stack:
 
-* [Ionic](https://ionicframework.com/) (which includes the following)
+* [Ionic 3](https://ionicframework.com/) (which includes the following)
 * [Angular](https://angularjs.org/)
 * [Cordova](https://cordova.apache.org/)
 * [Gulp](http://gulpjs.com/)
@@ -39,22 +39,22 @@ $ sudo npm install -g ionic
 Then add specific platforms:
 
 ```bash
-$ ionic platform add ios
-$ ionic platform add android
+$ ionic cordova platform add ios
+$ ionic cordova platform add android
 ```
 
 To build execute following commands:
 
 ```bash
-$ ionic build ios
-$ ionic build android
+$ ionic cordova build ios
+$ ionic cordova build android
 ```
 
 To emulate on a platform run following commands:
 
 ```bash
-$ ionic emulate ios
-$ ionic emulate android
+$ ionic cordova emulate ios
+$ ionic cordova emulate android
 ```
 
 To start the web-view, run
