@@ -6,18 +6,18 @@ Description: This is a short description on what your project is about. Goals/ t
 
 Used technology stack:
 
-*[Ionic](https://ionicframework.com/) (which includes the following)
-*[Angular](https://angularjs.org/)
-*[Cordova](https://cordova.apache.org/)
-*[Gulp](http://gulpjs.com/)
+* [Ionic](https://ionicframework.com/) (which includes the following)
+* [Angular](https://angularjs.org/)
+* [Cordova](https://cordova.apache.org/)
+* [Gulp](http://gulpjs.com/)
 
 ## Team Setup
 
 The project Team consists of following members:
 
-*[Daniel Brunner](https://github.com/danjelous)
-*[Daniel Huber EDIT LINK PLS](https://github.com/danjelous)
-*[Michael Troger EDIT LINK PLS](https://github.com/danjelous)
+* [Daniel Brunner](https://github.com/danjelous)
+* [Daniel Huber EDIT LINK PLS](https://github.com/danjelous)
+* [Michael Troger EDIT LINK PLS](https://github.com/danjelous)
 
 ## Using this project
 
@@ -75,7 +75,7 @@ To install the app on iOS, switch to the folder `/platforms/ios` and open the xc
 
 ### Install app on android
 
-Switch to the folder `/platforms/adnroid` and grab the `.apk`.
+Switch to the folder `/platforms/android` and grab the `.apk`.
 
 ## Artefacts
 
