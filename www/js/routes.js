@@ -139,17 +139,14 @@ angular.module('app.routes', [])
       })
 
       .state('menu.addBook4', {
-        url: '/addbook_final',
+        url: '/addbook-confirm',
         views: {
           'side-menu21': {
-            templateUrl: 'templates/addBook4.html',
-            controller: 'addBook4Ctrl'
+            templateUrl: 'templates/addBook-confirm.html',
+            controller: 'addBookConfirmCtrl'
           }
         }
       })
 
     $urlRouterProvider.otherwise('/side-menu21/browse')
-
-
-
   });

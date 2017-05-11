@@ -5,11 +5,11 @@
       <a ui-sref="menu.addBook2" id="addBook-button44" class="button button-positive  button-block button-outline">Barcode</a>
       <a ui-sref="menu.addBook3" id="addBook-button45" class="button button-positive  button-block button-outline">Manual</a>
     </div>
-    <form id="addBook-form7" class="list">
+    <form id="addBook-form7" name="searchForm" class="list">
       <label class="item item-input" id="addBook-input28">
-        <input type="text" placeholder="Enter Title or ISBN">
+        <input type="text" name="bookInfoHolder" ng-model="bookInfoHolder" required placeholder="Enter Title or ISBN">
       </label>
+      <a ng-disabled="searchForm.$invalid" ng-click="searchBook(bookInfoHolder)" id="addBook-search-btn" class="button button-positive  button-block">Add</a>
     </form>
-    <a ui-sref="menu.addBook4" id="addBook-button46" class="button button-positive  button-block">Add</a>
   </ion-content>
 </ion-view>
