@@ -121,14 +121,37 @@ angular.module('app.controllers', [])
     // TIP: Access Route Parameters for your page via $stateParams.parameterName
     function ($scope, $stateParams, $location, BookDataService) {
 
-       let searchQuery = $location.search().query;
+      // Init
+      $scope.noBooksFound = false;
+      $scope.booksFound = false;
 
-        BookDataService.getBookByIsbn(searchQuery)
-          .error((error) => {
-            console.log(error);
-          })
-          .success((response) => {
-            console.log(response);
-          });
+      // Query param
+      let searchQuery = $location.search().query;
+
+      BookDataService.getBookByIsbn(searchQuery)
+        .error((error) => {
+          console.log(error);
+        })
+        .success((response) => {
+
+          // Check if we got a book
+          $scope.booksFound = (response.totalItems > 0);
+          $scope.noBooksFound = !$scope.booksFound;
+
+          // Dummy ISBN: 0735619670
+          console.log(response);
+
+          if ($scope.booksFound) {
+
+            $scope.generatedBookData = {}
+
+            // Reassing needed values (currently assume only one result --> ISBN == unique :)
+            $scope.generatedBookData.title = response.items[0].volumeInfo.title;
+            $scope.generatedBookData.author = response.items[0].volumeInfo.authors.toString(); // Array to String
+            $scope.generatedBookData.thumbnailImage = response.items[0].volumeInfo.imageLinks.thumbnail;
+            console.log($scope.generatedBookData.thumbnailImage);
+          }
+
+        });
 
     }])

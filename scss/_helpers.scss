@@ -1,0 +1,27 @@
+/*
+ * Use this file for  custom changes <3
+ */
+
+$gutter-width: 50px;
+
+.paddingLeft {
+	padding-left: $gutter-width;
+}
+
+.island {
+	margin-top: $gutter-width;
+}
+
+.islandBottom {
+	margin-bottom: $gutter-width;
+}
+
+.islandHalf {
+	margin-top: $gutter-width / 2;
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
