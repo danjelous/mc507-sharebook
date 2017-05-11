@@ -143,13 +143,23 @@ angular.module('app.controllers', [])
 
           if ($scope.booksFound) {
 
-            $scope.generatedBookData = {}
+            $scope.generatedBookData = {};
 
             // Reassing needed values (currently assume only one result --> ISBN == unique :)
             $scope.generatedBookData.title = response.items[0].volumeInfo.title;
             $scope.generatedBookData.author = response.items[0].volumeInfo.authors.toString(); // Array to String
             $scope.generatedBookData.thumbnailImage = response.items[0].volumeInfo.imageLinks.thumbnail;
+            $scope.generatedBookData.genre = response.items[0].volumeInfo.categories.toString(); // Array to String
+            $scope.generatedBookData.description = response.items[0].volumeInfo.imageLinks.thumbnail;
             console.log($scope.generatedBookData.thumbnailImage);
+
+            // Strangely I need a separate variable for each placeholder :x (cant use value of model)
+            $scope.generatedBookData.placeholders = {};
+            $scope.generatedBookData.placeholders.author = $scope.generatedBookData.author;
+            $scope.generatedBookData.placeholders.title = $scope.generatedBookData.title;
+            $scope.generatedBookData.placeholders.genre = $scope.generatedBookData.genre;
+            $scope.generatedBookData.placeholders.description = $scope.generatedBookData.description;
+
           }
 
         });

@@ -13,15 +13,26 @@
 
         <h4>Title</h4>
         <label class="item item-input">
-          <input type="text" ng-model="generatedBookData.title">
+          <input type="text" ng-model="generatedBookData.title" placeholder="{{generatedBookData.placeholders.title}}">
         </label>
 
         <h4 class="islandHalf">Author</h4>
         <label class="item item-input">
-          <input type="text" ng-model="generatedBookData.author">
+          <input type="text" ng-model="generatedBookData.author" placeholder="{{generatedBookData.placeholders.author}}">
         </label>
 
         <img class="img-center islandHalf" ng-src="{{generatedBookData.thumbnailImage}}">
+
+        <h4 class="islandHalf">Genre</h4>
+        <label class="item item-input">
+          <input type="text" ng-model="generatedBookData.genre" placeholder="{{generatedBookData.placeholders.genre}}">
+        </label>
+
+
+        <h4 class="islandHalf">Description</h4>
+        <label class="item item-input">
+          <textarea type="text" ng-model="generatedBookData.description" placeholder="{{generatedBookData.placeholders.description}}">
+        </label>
 
         <a ng-disabled="confirmBookForm.$invalid" class="islandHalf button button-positive button-block">Confirm</a>
       </form>
