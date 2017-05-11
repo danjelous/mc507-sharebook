@@ -17,7 +17,7 @@ The project Team consists of following members:
 
 * [Daniel Brunner](https://github.com/danjelous)
 * [Daniel Huber EDIT LINK PLS](https://github.com/danjelous)
-* [Michael Troger EDIT LINK PLS](https://github.com/danjelous)
+* [Michael Troger](https://github.com/michaeltroger)
 
 ## Using this project
 
