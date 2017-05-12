@@ -138,9 +138,6 @@ angular.module('app.controllers', [])
           $scope.booksFound = (response.totalItems > 0);
           $scope.noBooksFound = !$scope.booksFound;
 
-          // Dummy ISBN: 0735619670
-          console.log(response);
-
           if ($scope.booksFound) {
 
             $scope.generatedBookData = {};
@@ -150,8 +147,7 @@ angular.module('app.controllers', [])
             $scope.generatedBookData.author = response.items[0].volumeInfo.authors.toString(); // Array to String
             $scope.generatedBookData.thumbnailImage = response.items[0].volumeInfo.imageLinks.thumbnail;
             $scope.generatedBookData.genre = response.items[0].volumeInfo.categories.toString(); // Array to String
-            $scope.generatedBookData.description = response.items[0].volumeInfo.imageLinks.thumbnail;
-            console.log($scope.generatedBookData.thumbnailImage);
+            $scope.generatedBookData.description = response.items[0].volumeInfo.description;
 
             // Strangely I need a separate variable for each placeholder :x (cant use value of model)
             $scope.generatedBookData.placeholders = {};
@@ -159,9 +155,17 @@ angular.module('app.controllers', [])
             $scope.generatedBookData.placeholders.title = $scope.generatedBookData.title;
             $scope.generatedBookData.placeholders.genre = $scope.generatedBookData.genre;
             $scope.generatedBookData.placeholders.description = $scope.generatedBookData.description;
-
           }
 
         });
+
+      $scope.saveBook = () => {
+
+        // place future REST call, now localstorage..
+        let bookToSave = $scope.generatedBookData;
+        delete bookToSave.placeholders;
+        let bookToSaveString = JSON.stringify(bookToSave);
+        window.localStorage.setItem(`sharebook.${searchQuery}`, bookToSaveString);
+      }
 
     }])

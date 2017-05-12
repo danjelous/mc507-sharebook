@@ -1,4 +1,4 @@
-<ion-view title="Confirm Data" id="page19">
+<ion-view title="Confirm Generated Data" id="page19">
   <ion-content padding="true" class="has-header">
 
     <div class="no-results island text-center" ng-show="noBooksFound">
@@ -6,51 +6,34 @@
       <a href="/#/side-menu21/addbook-search" class="button button-positive button-block island">Back to search</a>
     </div>
 
-    <div class="has-results island" ng-show="booksFound">
+    <div class="has-results" ng-show="booksFound">
       <form name="confirmBookForm" class="list">
-
-        <h3 class="islandBottom island text-center">Please check the generated data</h3>
 
         <h4>Title</h4>
         <label class="item item-input">
-          <input type="text" ng-model="generatedBookData.title" placeholder="{{generatedBookData.placeholders.title}}">
+          <input type="text" required ng-model="generatedBookData.title" placeholder="{{generatedBookData.placeholders.title}}">
         </label>
 
         <h4 class="islandHalf">Author</h4>
         <label class="item item-input">
-          <input type="text" ng-model="generatedBookData.author" placeholder="{{generatedBookData.placeholders.author}}">
+          <input type="text" required ng-model="generatedBookData.author" placeholder="{{generatedBookData.placeholders.author}}">
         </label>
 
         <img class="img-center islandHalf" ng-src="{{generatedBookData.thumbnailImage}}">
 
         <h4 class="islandHalf">Genre</h4>
         <label class="item item-input">
-          <input type="text" ng-model="generatedBookData.genre" placeholder="{{generatedBookData.placeholders.genre}}">
+          <input type="text" required ng-model="generatedBookData.genre" placeholder="{{generatedBookData.placeholders.genre}}">
         </label>
 
 
         <h4 class="islandHalf">Description</h4>
         <label class="item item-input">
-          <textarea type="text" ng-model="generatedBookData.description" placeholder="{{generatedBookData.placeholders.description}}">
+          <textarea type="text" required rows="5" ng-model="generatedBookData.description" placeholder="{{generatedBookData.placeholders.description}}"></textarea>>
         </label>
 
-        <a ng-disabled="confirmBookForm.$invalid" class="islandHalf button button-positive button-block">Confirm</a>
+        <a ng-disabled="confirmBookForm.$invalid" ng-click="saveBook()" class="block islandHalf button button-positive">Confirm</a>
       </form>
-      <input class="generatedBookData text-center" ng-model="bookTitle">
-      <h3 class="text-center">by <span ng-bind="bookAuthor"></span></h3>
-      <div class="spacer" style="height: 10px;"></div>
-      <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
-        <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
-      </div>
-      <div class="spacer" style="height: 10px;"></div>
-      <h5 id="addBook4-heading25" style="color:#000000;">Genre: Thriller, Drama</h5>
-      <div class="spacer" style="height: 10px;"></div>
-      <div id="addBook4-markdown7" class="show-list-numbers-and-dots">
-        <p style="color:#000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien purus, maximus sit amet mauris bibendum, pharetra
-          luctus odio. Nam a arcu nisi. Fusce malesuada ullamcorper dui, quis sagittis dolor euismod vel. Sed molestie sagittis
-          augue, sit amet tristique tortor accumsan vitae. </p>
-      </div>
-
     </div>
 
   </ion-content>
