@@ -16,7 +16,7 @@ Used technology stack:
 The project Team consists of following members:
 
 * [Daniel Brunner](https://github.com/danjelous)
-* [Daniel Huber EDIT LINK PLS](https://github.com/danjelous)
+* [Daniel Huber](https://github.com/danielhuber3008)
 * [Michael Troger](https://github.com/michaeltroger)
 
 ## Using this project
