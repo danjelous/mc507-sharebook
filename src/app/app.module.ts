@@ -8,14 +8,12 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { AddpageComponent } from '../components/addpage/addpage';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    AddpageComponent
+    ListPage
   ],
   imports: [
     BrowserModule,
