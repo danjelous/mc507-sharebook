@@ -13,7 +13,7 @@ import { AddBookPage } from '../pages/add-book/add-book';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = AddBookPage;
 
   pages: Array<{title: string, component: any}>;
 
