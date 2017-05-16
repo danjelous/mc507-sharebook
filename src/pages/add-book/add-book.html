@@ -1,30 +1,33 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+   <ion-navbar>
+      <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Add Book</ion-title>
-  </ion-navbar>
+      <ion-title>Add Book</ion-title>
+   </ion-navbar>
+
+   <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="addBookBy">
+         <ion-segment-button value="search">
+            Search ISBN
+         </ion-segment-button>
+         <ion-segment-button value="barcode">
+            Barcode
+         </ion-segment-button>
+         <ion-segment-button value="manual">
+            Manual
+         </ion-segment-button>
+      </ion-segment>
+   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+   <div [ngSwitch]="search">
 
-  <ion-tabs>
-    <ion-tab [root]="add-book-search"></ion-tab>
-    <ion-tab [root]="add-book-barcode"></ion-tab>
-    <ion-tab [root]="add-book-manual"></ion-tab>
-  </ion-tabs>
+      <ion-item>
+         <ion-label>Search by ISBN</ion-label>
+         <ion-input type="text" [(ngModel)]="searchForm.isbn" name="isbn"></ion-input>
+      </ion-item>
 
-  <form id="addBook-form7" name="searchForm" class="list">
-    <label class="item item-input" id="addBook-input28">
-        <input type="text" name="bookInfoHolder" ng-model="bookInfoHolder" required placeholder="Enter Title or ISBN">
-      </label>
-
-    <h3>#DEV ISBNs</h3>
-    <ul>
-      <li>0735619670</li>
-    </ul>
-
-    <a ng-disabled="searchForm.$invalid" ng-click="searchBook(bookInfoHolder)" id="addBook-search-btn" class="button button-positive  button-block">Add</a>
-  </form>
+   </div>
 </ion-content>
