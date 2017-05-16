@@ -8,11 +8,23 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-tabs>
+    <ion-tab [root]="add-book-search"></ion-tab>
+    <ion-tab [root]="add-book-barcode"></ion-tab>
+    <ion-tab [root]="add-book-manual"></ion-tab>
+  </ion-tabs>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <form id="addBook-form7" name="searchForm" class="list">
+    <label class="item item-input" id="addBook-input28">
+        <input type="text" name="bookInfoHolder" ng-model="bookInfoHolder" required placeholder="Enter Title or ISBN">
+      </label>
+
+    <h3>#DEV ISBNs</h3>
+    <ul>
+      <li>0735619670</li>
+    </ul>
+
+    <a ng-disabled="searchForm.$invalid" ng-click="searchBook(bookInfoHolder)" id="addBook-search-btn" class="button button-positive  button-block">Add</a>
+  </form>
 </ion-content>
