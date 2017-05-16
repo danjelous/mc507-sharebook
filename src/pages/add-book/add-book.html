@@ -6,7 +6,7 @@
       <ion-title>Add Book</ion-title>
    </ion-navbar>
 
-   <ion-toolbar no-border-top>
+   <ion-toolbar border-top>
       <ion-segment [(ngModel)]="addBookBy">
          <ion-segment-button value="search">
             Search ISBN
@@ -22,12 +22,20 @@
 </ion-header>
 
 <ion-content>
-   <div [ngSwitch]="search">
+   <div [ngSwitch]="addBookBy">
+      <div *ngSwitchCase="'search'">
+         <ion-item>
+            <ion-label>Search by ISBN</ion-label>
+            <!--<ion-input type="text" [(ngModel)]="searchForm.isbn" name="isbn"></ion-input>-->
+         </ion-item>
+      </div>
 
-      <ion-item>
-         <ion-label>Search by ISBN</ion-label>
-         <ion-input type="text" [(ngModel)]="searchForm.isbn" name="isbn"></ion-input>
-      </ion-item>
+      <div *ngSwitchCase="'barcode'">
+         <h1>yo, barcode!</h1>
+      </div>
 
+      <div *ngSwitchCase="'manual'">
+         <h1>add mega sexy form here</h1>
+      </div>
    </div>
 </ion-content>

@@ -13,15 +13,15 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
    selector: 'page-add-book',
    templateUrl: 'add-book.html',
 
-   template: `
-    <form [formGroup]="searchForm" (ngSubmit)="searchByISBN()">
-      <ion-item>
-        <ion-label>Search by ISBN</ion-label>
-        <ion-input type="number" formControlName="isbn"></ion-input>
-      </ion-item>
-      <button ion-button type="submit" [disabled]="!searchForm.valid">Search</button>
-    </form>
-  `
+//    template: `
+//     <form [formGroup]="searchForm" (ngSubmit)="searchByISBN()">
+//       <ion-item>
+//         <ion-label>Search by ISBN</ion-label>
+//         <ion-input type="number" formControlName="isbn"></ion-input>
+//       </ion-item>
+//       <button ion-button type="submit" [disabled]="!searchForm.valid">Search</button>
+//     </form>
+//   `
 })
 export class AddBookPage {
 
@@ -36,9 +36,9 @@ export class AddBookPage {
       public navParams: NavParams,
       private formBuilder: FormBuilder) {
 
-      this.searchForm = this.formBuilder.group({
-         isbn: [ Validators.required]
-      });
+      // this.searchForm = this.formBuilder.group({
+      //    isbn: [ Validators.required]
+      // });
    }
 
    searchByISBN() {
