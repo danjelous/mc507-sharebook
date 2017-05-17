@@ -12,7 +12,14 @@ import 'rxjs/add/operator/map';
 export class BookDataServiceProvider {
 
   constructor(public http: Http) {
-    console.log('Hello BookDataServiceProvider Provider');
+    this.http = http;
+  }
+
+
+  service.baseUrl = CONFIG.googleBooksApiUrl;
+
+  getBookByIsbn = (isbn) => {
+    return this.http.get(service.baseUrl + `?q=isbn:${isbn}`);
   }
 
 }

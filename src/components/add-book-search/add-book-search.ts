@@ -12,6 +12,7 @@ import { BookDataServiceProvider } from '../../providers/book-data-service/book-
    selector: 'add-book-search',
    templateUrl: 'add-book-search.html'
 })
+
 export class AddBookSearchComponent {
 
    // Searchform
@@ -22,6 +23,7 @@ export class AddBookSearchComponent {
          isbn: [Validators.required, Validators.minLength(10)]
       });
 
+      this.bookDataService = bookDataService;
       console.log(bookDataService);
    }
 
@@ -30,5 +32,4 @@ export class AddBookSearchComponent {
       $event.preventDefault();
       console.log("API goes here");
    }
-
 }
