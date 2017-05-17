@@ -24,10 +24,7 @@
 <ion-content>
    <div [ngSwitch]="addBookBy">
       <div *ngSwitchCase="'search'">
-         <ion-item>
-            <ion-label>Search by ISBN</ion-label>
-            <!--<ion-input type="text" [(ngModel)]="searchForm.isbn" name="isbn"></ion-input>-->
-         </ion-item>
+        <add-book-search></add-book-search>
       </div>
 
       <div *ngSwitchCase="'barcode'">

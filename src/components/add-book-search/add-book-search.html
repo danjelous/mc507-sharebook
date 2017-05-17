@@ -1,0 +1,6 @@
+<form [formGroup]="searchForm" (ngSubmit)="searchByISBN()">
+   <ion-item>
+      <ion-input type="number" placeholder="Search by ISBN" formControlName="isbn"></ion-input>
+   </ion-item>
+   <button ion-button (click)="sendForm($event)" [disabled]="!searchForm.valid">Search</button>
+</form>
