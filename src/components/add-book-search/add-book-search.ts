@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { BookDataServiceProvider } from '../../providers/book-data-service/book-data-service';
+import { BookDataServiceProvider } from '../../providers/book-data.service/book-data.service';
 
 /**
  * Generated class for the AddBookSearchComponent component.
@@ -19,17 +19,19 @@ export class AddBookSearchComponent {
    private searchForm: FormGroup;
 
    constructor(private formBuilder: FormBuilder, private bookDataService: BookDataServiceProvider) {
+      // Validators.minLength(10)
       this.searchForm = this.formBuilder.group({
-         isbn: [Validators.required, Validators.minLength(10)]
+         isbn: ['',
+            Validators.required
+         ]
       });
 
       this.bookDataService = bookDataService;
-      console.log(bookDataService);
    }
 
    sendForm($event: MouseEvent) {
 
       $event.preventDefault();
-      console.log("API goes here");
+      this.bookDataService.getBookByIsbn(this.searchForm.controls.isbn.value);
    }
 }
