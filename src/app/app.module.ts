@@ -11,7 +11,7 @@ import { AddBookPage } from '../pages/add-book/add-book';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AddBookSearchComponent } from '../components/add-book-search/add-book-search';
-import { BookDataServiceProvider } from '../providers/book-data-service/book-data-service';
+import { BookDataServiceProvider } from '../providers/book-data.service/book-data.service';
 
 @NgModule({
   declarations: [
