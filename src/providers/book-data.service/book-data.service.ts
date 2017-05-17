@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Inject } from '@angular/core';
 import { Http } from '@angular/http';
+import { APP_CONFIG, IAppConfig } from '../../app/app.config';
+
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 /*
   Generated class for the BookDataServiceProvider provider.
@@ -11,15 +15,22 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class BookDataServiceProvider {
 
-  constructor(public http: Http) {
-    this.http = http;
-  }
+   baseUrl: string;
 
+   constructor( @Inject(APP_CONFIG) private config: IAppConfig, public http: Http) {
+      this.http = http;
+      this.baseUrl = config.googleBooksApiUrl;
+   }
 
-  service.baseUrl = CONFIG.googleBooksApiUrl;
+   private handleError(error: any): Promise<any> {
+      console.error('An error occurred', error);
+      return Promise.reject(error.message || error);
+   }
 
-  getBookByIsbn = (isbn) => {
-    return this.http.get(service.baseUrl + `?q=isbn:${isbn}`);
-  }
-
+   public getBookByIsbn(isbn: number): Promise<Object> {
+      return this.http.get(this.baseUrl + `?q=isbn:${isbn}`)
+         .toPromise()
+         .then(response => response.json().data as Object)
+         .catch(this.handleError);
+   }
 }

@@ -3,9 +3,9 @@ import { OpaqueToken } from "@angular/core";
 export let APP_CONFIG = new OpaqueToken('app.config');
 
 export interface IAppConfig {
-   customApiUrl: string,
-   googleBooksApiUrl: string,
-   googleBooksApiKey: string
+   customApiUrl: string;
+   googleBooksApiUrl: string;
+   googleBooksApiKey: string;
 }
 
 export const AppConfig: IAppConfig = {

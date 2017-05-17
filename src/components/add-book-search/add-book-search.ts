@@ -32,6 +32,6 @@ export class AddBookSearchComponent {
    sendForm($event: MouseEvent) {
 
       $event.preventDefault();
-      this.bookDataService.getBookByIsbn(this.searchForm.controls.isbn.value);
+      let bookData = this.bookDataService.getBookByIsbn(this.searchForm.controls.isbn.value);
    }
 }
