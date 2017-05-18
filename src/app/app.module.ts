@@ -21,12 +21,16 @@ import { BookDataServiceProvider } from '../providers/book-data.service/book-dat
 // Ionic
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CollectionPage } from "../pages/collection/collection";
+import { TradesPage } from "../pages/trades/trades";
 
 @NgModule({
    declarations: [
       MyApp,
       HomePage,
       ListPage,
+      CollectionPage,
+      TradesPage,
       EditprofilePage,
       ProfilePage,
       AddBookPage,
@@ -42,6 +46,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
       MyApp,
       HomePage,
       ListPage,
+      CollectionPage,
+      TradesPage,
       EditprofilePage,
       ProfilePage,
       AddBookPage
