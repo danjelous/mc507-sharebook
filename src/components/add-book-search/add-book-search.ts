@@ -39,7 +39,7 @@ export class AddBookSearchComponent {
         if (data)
           this.navCtrl.push(AddbookconfirmationPage, data[0].volumeInfo);
         else
-          alert("No Book found")
+          alert("No Book found");
       });
    }
 }

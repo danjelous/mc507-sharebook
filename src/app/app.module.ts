@@ -7,6 +7,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { APP_CONFIG, AppConfig } from './app.config';
 import { AddBookSearchComponent } from '../components/add-book-search/add-book-search';
+import { AddBookBarcodeComponent } from '../components/add-book-barcode/add-book-barcode';
 
 // Pages
 import { HomePage } from '../pages/home/home';
@@ -24,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CollectionPage } from "../pages/collection/collection";
 import { TradesPage } from "../pages/trades/trades";
 import { AddbookconfirmationPage } from "../pages/addbookconfirmation/addbookconfirmation";
+import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 
 @NgModule({
    declarations: [
@@ -36,7 +38,8 @@ import { AddbookconfirmationPage } from "../pages/addbookconfirmation/addbookcon
       ProfilePage,
       AddbookconfirmationPage,
       AddBookPage,
-      AddBookSearchComponent
+      AddBookSearchComponent,
+    AddBookBarcodeComponent
    ],
    imports: [
       BrowserModule,
@@ -60,7 +63,8 @@ import { AddbookconfirmationPage } from "../pages/addbookconfirmation/addbookcon
       SplashScreen,
       { provide: ErrorHandler, useClass: IonicErrorHandler },
       { provide: APP_CONFIG, useValue: AppConfig },
-      BookDataServiceProvider
+      BookDataServiceProvider,
+      BarcodeScanner
    ]
 })
 export class AppModule { }
