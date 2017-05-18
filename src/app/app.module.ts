@@ -12,6 +12,7 @@ import { AddBookSearchComponent } from '../components/add-book-search/add-book-s
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AddBookPage } from '../pages/add-book/add-book';
+import { ProfilePage } from '../pages/profile/profile';
 
 // Provider
 import { BookDataServiceProvider } from '../providers/book-data.service/book-data.service';
@@ -25,6 +26,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
       MyApp,
       HomePage,
       ListPage,
+      ProfilePage,
       AddBookPage,
       AddBookSearchComponent
    ],
@@ -38,6 +40,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
       MyApp,
       HomePage,
       ListPage,
+      ProfilePage,
       AddBookPage
    ],
    providers: [
