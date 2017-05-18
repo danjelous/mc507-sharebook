@@ -14,6 +14,25 @@
 
 
 <ion-content padding>
-  <p>{{bookData.volumeInfo.title}}</p>
-  <p>{{bookData.selfLink}}</p>
+  <form name="confirmBookForm" class="list">
+
+        <h4>Title</h4>
+          <ion-input type="text" value="{{bookData.title}}" required placeholder="Titel"></ion-input>
+
+        <h4 class="title">Author</h4>
+          <ion-input type="text" value="{{bookData.authors[0]}}" required placeholder="Autor"></ion-input>
+
+        <img *ngIf="bookData.imageLinks" width="128" height="auto" src="{{bookData.imageLinks.thumbnail}}">
+
+        <h4 class="title">Genre</h4>
+          <ion-input type="text" value="{{bookData.categories[0]}}" required placeholder="Genre"></ion-input>
+
+        <h4 class="title">Description</h4>
+          <ion-textarea name="description" type="text" [(ngModel)] = "bookData.description" required rows="5" placeholder="Description"></ion-textarea>
+
+      <ion-buttons end>
+      <button ion-button margin-top >Submit!</button>
+      </ion-buttons>
+
+      </form>
 </ion-content>

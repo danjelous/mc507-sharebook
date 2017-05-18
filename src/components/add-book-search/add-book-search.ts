@@ -36,7 +36,10 @@ export class AddBookSearchComponent {
       $event.preventDefault();
       this.bookDataService.getBookByIsbn(this.searchForm.controls.isbn.value).then(data => {
         console.log(data);
-        this.navCtrl.push(AddbookconfirmationPage, data[0]);
+        if (data)
+          this.navCtrl.push(AddbookconfirmationPage, data[0].volumeInfo);
+        else
+          alert("No Book found")
       });
    }
 }
