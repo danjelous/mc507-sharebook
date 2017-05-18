@@ -23,6 +23,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CollectionPage } from "../pages/collection/collection";
 import { TradesPage } from "../pages/trades/trades";
+import { AddbookconfirmationPage } from "../pages/addbookconfirmation/addbookconfirmation";
 
 @NgModule({
    declarations: [
@@ -33,6 +34,7 @@ import { TradesPage } from "../pages/trades/trades";
       TradesPage,
       EditprofilePage,
       ProfilePage,
+      AddbookconfirmationPage,
       AddBookPage,
       AddBookSearchComponent
    ],
@@ -50,6 +52,7 @@ import { TradesPage } from "../pages/trades/trades";
       TradesPage,
       EditprofilePage,
       ProfilePage,
+      AddbookconfirmationPage,
       AddBookPage
    ],
    providers: [

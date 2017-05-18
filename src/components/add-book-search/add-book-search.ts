@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { BookDataServiceProvider } from '../../providers/book-data.service/book-data.service';
+import { NavController } from "ionic-angular";
+import { AddbookconfirmationPage } from "../../pages/addbookconfirmation/addbookconfirmation";
 
 /**
  * Generated class for the AddBookSearchComponent component.
@@ -18,7 +20,7 @@ export class AddBookSearchComponent {
    // Searchform
    private searchForm: FormGroup;
 
-   constructor(private formBuilder: FormBuilder, private bookDataService: BookDataServiceProvider) {
+   constructor(public navCtrl: NavController, private formBuilder: FormBuilder, private bookDataService: BookDataServiceProvider) {
       // Validators.minLength(10)
       this.searchForm = this.formBuilder.group({
          isbn: ['',
@@ -32,6 +34,9 @@ export class AddBookSearchComponent {
    sendForm($event: MouseEvent) {
 
       $event.preventDefault();
-      let bookData = this.bookDataService.getBookByIsbn(this.searchForm.controls.isbn.value);
+      this.bookDataService.getBookByIsbn(this.searchForm.controls.isbn.value).then(data => {
+        console.log(data);
+        this.navCtrl.push(AddbookconfirmationPage, data[0]);
+      });
    }
 }

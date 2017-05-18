@@ -21,7 +21,5 @@ export class AddBookPage {
 
    }
 
-   searchByISBN() {
-      console.log("Here comes the service");
-   }
+ 
 }

@@ -30,7 +30,7 @@ export class BookDataServiceProvider {
    public getBookByIsbn(isbn: number): Promise<Object> {
       return this.http.get(this.baseUrl + `?q=isbn:${isbn}`)
          .toPromise()
-         .then(response => response.json().data as Object)
+         .then(response => response.json().items)
          .catch(this.handleError);
    }
 }
