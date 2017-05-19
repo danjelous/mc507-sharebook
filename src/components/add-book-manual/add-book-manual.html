@@ -1,0 +1,26 @@
+<form [formGroup]="addBookManualForm">
+
+   <ion-item>
+      <ion-input type="number" placeholder="ISBN" formControlName="isbn"></ion-input>
+   </ion-item>
+
+   <ion-item>
+      <ion-input type="text" placeholder="Title" formControlName="title"></ion-input>
+   </ion-item>
+
+   <ion-item>
+      <ion-input type="text" placeholder="Author" formControlName="author"></ion-input>
+   </ion-item>
+
+   <ion-item>
+      <ion-input type="file" placeholder="Image" formControlName="image"></ion-input>
+   </ion-item>
+
+   <ion-item>
+      <ion-input type="text" placeholder="Genre" formControlName="genre"></ion-input>
+   </ion-item>
+
+   <ion-textarea type="text" formControlName="description" rows="5" placeholder="Description"></ion-textarea>
+
+   <button ion-button margin-top (click)="addBook($event)" class="pull-right" [disabled]="!addBookManualForm.valid">Add</button>
+</form>

@@ -26,6 +26,7 @@ import { CollectionPage } from "../pages/collection/collection";
 import { TradesPage } from "../pages/trades/trades";
 import { AddbookconfirmationPage } from "../pages/addbookconfirmation/addbookconfirmation";
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
+import { AddBookManualComponent } from '../components/add-book-manual/add-book-manual';
 
 @NgModule({
    declarations: [
@@ -39,7 +40,8 @@ import { BarcodeScanner } from "@ionic-native/barcode-scanner";
       AddbookconfirmationPage,
       AddBookPage,
       AddBookSearchComponent,
-    AddBookBarcodeComponent
+      AddBookBarcodeComponent,
+      AddBookManualComponent
    ],
    imports: [
       BrowserModule,
