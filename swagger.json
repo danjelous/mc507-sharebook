@@ -82,7 +82,10 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "OK"
+            "description" : "Books of the category.",
+            "schema" : {
+              "$ref" : "#/definitions/Category"
+            }
           }
         }
       }
@@ -127,8 +130,9 @@
         },
         "books" : {
           "type" : "array",
-          "items" : null,
-          "$ref" : "#/definitions/Book"
+          "items" : {
+            "$ref" : "#/definitions/Book"
+          }
         }
       }
     }
