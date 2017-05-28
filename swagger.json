@@ -1,3 +1,136 @@
 {
-  "swagger" : "2.0"
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "The initial Sharebook API.",
+    "version" : "1.0.0",
+    "title" : "Sharebook API"
+  },
+  "tags" : [ {
+    "name" : "book",
+    "description" : "All single book operations."
+  }, {
+    "name" : "books",
+    "description" : "All multiple book operations."
+  } ],
+  "host" : "api.sharebook.at",
+  "basePath" : "/v1",
+  "schemes" : [ "https" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/book" : {
+      "post" : {
+        "summary" : "Adds a book to the database.",
+        "tags" : [ "book" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "book",
+          "description" : "The book to add.",
+          "schema" : {
+            "$ref" : "#/definitions/Book"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    },
+    "/book/{id}" : {
+      "get" : {
+        "summary" : "Get a book by ID.",
+        "tags" : [ "book" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Book ID",
+          "type" : "integer",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    },
+    "/books" : {
+      "get" : {
+        "summary" : "Overview display of books of different categories for the startpage.",
+        "tags" : [ "books" ],
+        "responses" : {
+          "200" : {
+            "description" : "Some books of different categories for a preview.",
+            "schema" : {
+              "$ref" : "#/definitions/Books"
+            }
+          }
+        }
+      }
+    },
+    "/books/{genre}" : {
+      "get" : {
+        "summary" : "Overview display of books from chosen genre.",
+        "tags" : [ "books" ],
+        "parameters" : [ {
+          "name" : "genre",
+          "in" : "path",
+          "description" : "Book genre",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Book" : {
+      "type" : "object",
+      "required" : [ "title", "author", "genre", "description", "miniature", "image" ],
+      "properties" : {
+        "title" : {
+          "type" : "string"
+        },
+        "author" : {
+          "type" : "string"
+        },
+        "genre" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "miniature" : {
+          "type" : "object"
+        },
+        "image" : {
+          "type" : "object"
+        }
+      }
+    },
+    "Books" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Category"
+      }
+    },
+    "Category" : {
+      "type" : "object",
+      "properties" : {
+        "title" : {
+          "type" : "string"
+        },
+        "books" : {
+          "type" : "array",
+          "items" : null,
+          "$ref" : "#/definitions/Book"
+        }
+      }
+    }
+  }
 }
