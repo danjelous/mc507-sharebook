@@ -135,7 +135,8 @@
       "type" : "object",
       "properties" : {
         "title" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "Thrillers"
         },
         "books" : {
           "type" : "array",
