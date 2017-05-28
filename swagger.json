@@ -82,9 +82,9 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "Books of the category.",
+            "description" : "Books of the genre.",
             "schema" : {
-              "$ref" : "#/definitions/Category"
+              "$ref" : "#/definitions/Genre"
             }
           }
         }
@@ -119,10 +119,10 @@
     "Books" : {
       "type" : "array",
       "items" : {
-        "$ref" : "#/definitions/Category"
+        "$ref" : "#/definitions/Genre"
       }
     },
-    "Category" : {
+    "Genre" : {
       "type" : "object",
       "properties" : {
         "title" : {
