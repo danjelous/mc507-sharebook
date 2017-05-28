@@ -50,7 +50,10 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "OK"
+            "description" : "The book.",
+            "schema" : {
+              "$ref" : "#/definitions/Book"
+            }
           }
         }
       }
