@@ -100,22 +100,28 @@
       "required" : [ "title", "author", "genre", "description", "miniature", "image" ],
       "properties" : {
         "title" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "Todesmärchen"
         },
         "author" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "Andreas Gruber"
         },
         "genre" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "Thriller"
         },
         "description" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer..."
         },
         "miniature" : {
-          "type" : "object"
+          "type" : "string",
+          "example" : "https://placehold.it/350x350"
         },
         "image" : {
-          "type" : "object"
+          "type" : "string",
+          "example" : "https://placehold.it/640x640"
         }
       }
     },
