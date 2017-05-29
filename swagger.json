@@ -14,7 +14,7 @@
   } ],
   "host" : "localhost:7000",
   "basePath" : "/v1",
-  "schemes" : [ "https" ],
+  "schemes" : [ "http" ],
   "consumes" : [ "application/json" ],
   "produces" : [ "application/json" ],
   "paths" : {
