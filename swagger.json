@@ -12,7 +12,7 @@
     "name" : "books",
     "description" : "All multiple book operations."
   } ],
-  "host" : "api.sharebook.at",
+  "host" : "localhost:7000",
   "basePath" : "/v1",
   "schemes" : [ "https" ],
   "consumes" : [ "application/json" ],
