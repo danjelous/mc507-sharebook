@@ -86,7 +86,45 @@ exports.booksGenreGET = function(args, res, next) {
     "miniature" : "https://placehold.it/128x128",
     "description" : "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
     "title" : "Todesmärchen"
-  } ],
+  },
+  {
+    "image" : "https://placehold.it/640x640",
+    "author" : "Andreas Gruber",
+    "genre" : "Thriller",
+    "miniature" : "https://placehold.it/128x128",
+    "description" : "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
+    "title" : "Todesmärchen"
+  } ,
+  {
+    "image" : "https://placehold.it/640x640",
+    "author" : "Andreas Gruber",
+    "genre" : "Thriller",
+    "miniature" : "https://placehold.it/128x128",
+    "description" : "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
+    "title" : "Todesmärchen"
+  } ,
+  {
+    "image" : "https://placehold.it/640x640",
+    "author" : "Andreas Gruber",
+    "genre" : "Thriller",
+    "miniature" : "https://placehold.it/128x128",
+    "description" : "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
+    "title" : "Todesmärchen"
+  }, {
+    "image" : "https://placehold.it/640x640",
+    "author" : "Andreas Gruber",
+    "genre" : "Thriller",
+    "miniature" : "https://placehold.it/128x128",
+    "description" : "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
+    "title" : "Todesmärchen"
+  }, {
+    "image" : "https://placehold.it/640x640",
+    "author" : "Andreas Gruber",
+    "genre" : "Thriller",
+    "miniature" : "https://placehold.it/128x128",
+    "description" : "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
+    "title" : "Todesmärchen"
+  }  ],
   "title" : "Thrillers"
 };
   if(Object.keys(examples).length > 0) {
