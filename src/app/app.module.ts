@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { AddBookPage } from '../pages/add-book/add-book';
 import { EditprofilePage } from "../pages/editprofile/editprofile";
 import { ProfilePage } from '../pages/profile/profile';
+import { GenreOverviewPage } from '../pages/genre-overview/genre-overview';
 
 // Provider
 import { BookDataServiceProvider } from '../providers/book-data.service/book-data.service';
@@ -28,6 +29,7 @@ import { TradesPage } from "../pages/trades/trades";
 import { AddbookconfirmationPage } from "../pages/addbookconfirmation/addbookconfirmation";
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { AddBookManualComponent } from '../components/add-book-manual/add-book-manual';
+import { GenreOverviewProvider } from '../providers/genre-overview/genre-overview';
 
 @NgModule({
    declarations: [
@@ -37,6 +39,7 @@ import { AddBookManualComponent } from '../components/add-book-manual/add-book-m
       TradesPage,
       EditprofilePage,
       ProfilePage,
+      GenreOverviewPage,
       AddbookconfirmationPage,
       AddBookPage,
       AddBookSearchComponent,
@@ -54,6 +57,7 @@ import { AddBookManualComponent } from '../components/add-book-manual/add-book-m
       HomePage,
       CollectionPage,
       TradesPage,
+      GenreOverviewPage,
       EditprofilePage,
       ProfilePage,
       AddbookconfirmationPage,
@@ -67,7 +71,8 @@ import { AddBookManualComponent } from '../components/add-book-manual/add-book-m
       BookDataServiceProvider,
       AddBookProvider,
       BarcodeScanner,
-    BooksOverviewProvider
+    BooksOverviewProvider,
+    GenreOverviewProvider
    ]
 })
 export class AppModule { }

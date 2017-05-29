@@ -24,7 +24,7 @@ export class AddBookBarcodeComponent {
 
     this.barcodeScanner.scan().then((barcodeData) => {
         // success
-          this.bookDataService.getBookByIsbn(parseInt(barcodeData.text)).then(data => {
+        this.bookDataService.getBookByIsbn(parseInt(barcodeData.text)).then(data => {
           console.log(data);
           if (data) {
             this.navCtrl.push(AddbookconfirmationPage, data[0].volumeInfo);

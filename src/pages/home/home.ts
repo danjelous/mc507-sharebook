@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { BooksOverviewProvider } from '../../providers/books-overview/books-overview';
+import { GenreOverviewPage } from "../../pages/genre-overview/genre-overview";
 
 @Component({
   selector: 'page-home',
@@ -17,4 +18,7 @@ export class HomePage {
       });
   }
 
+  goToGenreOverview(genre) {
+    this.navCtrl.push(GenreOverviewPage, genre);
+  }
 }

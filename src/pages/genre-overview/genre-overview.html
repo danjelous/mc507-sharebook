@@ -1,0 +1,24 @@
+<!--
+  Generated template for the GenreOverviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{genre}} Overview</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="genreOverview">
+    <ion-list *ngFor="let book of genreOverview.books" no-lines>
+      <ion-item>
+          <ion-img title="{{book.title}}" width="128" height="128" src="{{book.miniature}}"></ion-img>
+        </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
