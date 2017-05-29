@@ -11,7 +11,6 @@ import { AddBookBarcodeComponent } from '../components/add-book-barcode/add-book
 
 // Pages
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { AddBookPage } from '../pages/add-book/add-book';
 import { EditprofilePage } from "../pages/editprofile/editprofile";
 import { ProfilePage } from '../pages/profile/profile';
@@ -34,7 +33,6 @@ import { AddBookManualComponent } from '../components/add-book-manual/add-book-m
    declarations: [
       MyApp,
       HomePage,
-      ListPage,
       CollectionPage,
       TradesPage,
       EditprofilePage,
@@ -54,7 +52,6 @@ import { AddBookManualComponent } from '../components/add-book-manual/add-book-m
    entryComponents: [
       MyApp,
       HomePage,
-      ListPage,
       CollectionPage,
       TradesPage,
       EditprofilePage,
