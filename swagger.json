@@ -117,7 +117,7 @@
         },
         "miniature" : {
           "type" : "string",
-          "example" : "https://placehold.it/350x350"
+          "example" : "https://placehold.it/128x128"
         },
         "image" : {
           "type" : "string",
