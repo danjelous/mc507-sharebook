@@ -1,1 +1,150 @@
-{"swagger":"2.0","info":{"description":"The initial Sharebook API.","version":"1.0.0","title":"Sharebook API"},"tags":[{"name":"book","description":"All single book operations."},{"name":"books","description":"All multiple book operations."}],"host":"api.sharebook.at","basePath":"/v1","schemes":["https"],"consumes":["application/json"],"produces":["application/json"],"paths":{"/book":{"post":{"summary":"Adds a book to the database.","tags":["book"],"parameters":[{"in":"body","name":"book","description":"The book to add.","schema":{"$ref":"#/definitions/Book"}}],"responses":{"200":{"description":"OK"}}}},"/book/{id}":{"get":{"summary":"Get a book by ID.","tags":["book"],"parameters":[{"name":"id","in":"path","description":"Book ID","type":"integer","required":true}],"responses":{"200":{"description":"OK"}}}},"/books":{"get":{"summary":"Overview display of books of different categories for the startpage.","tags":["books"],"responses":{"200":{"description":"OK"}}}},"/books/{genre}":{"get":{"summary":"Overview display of books from chosen genre.","tags":["books"],"parameters":[{"name":"genre","in":"path","description":"Book genre","type":"string","required":true}],"responses":{"200":{"description":"OK"}}}}},"definitions":{"Book":{"type":"object","required":["title","author","genre","description","miniature","image"],"properties":{"title":{"type":"string"},"author":{"type":"string"},"genre":{"type":"string"},"description":{"type":"string"},"miniature":{"type":"object"},"image":{"type":"object"}}}}}
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "The initial Sharebook API.",
+    "version" : "1.0.0",
+    "title" : "Sharebook API"
+  },
+  "tags" : [ {
+    "name" : "book",
+    "description" : "All single book operations."
+  }, {
+    "name" : "books",
+    "description" : "All multiple book operations."
+  } ],
+  "host" : "localhost:7000",
+  "basePath" : "/v1",
+  "schemes" : [ "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/book" : {
+      "post" : {
+        "summary" : "Adds a book to the database.",
+        "tags" : [ "book" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "book",
+          "description" : "The book to add.",
+          "schema" : {
+            "$ref" : "#/definitions/Book"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    },
+    "/book/{id}" : {
+      "get" : {
+        "summary" : "Get a book by ID.",
+        "tags" : [ "book" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "Book ID",
+          "type" : "integer",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "The book.",
+            "schema" : {
+              "$ref" : "#/definitions/Book"
+            }
+          }
+        }
+      }
+    },
+    "/books" : {
+      "get" : {
+        "summary" : "Overview display of books of different categories for the startpage.",
+        "tags" : [ "books" ],
+        "responses" : {
+          "200" : {
+            "description" : "Some books of different categories for a preview.",
+            "schema" : {
+              "$ref" : "#/definitions/Books"
+            }
+          }
+        }
+      }
+    },
+    "/books/{genre}" : {
+      "get" : {
+        "summary" : "Overview display of books from chosen genre.",
+        "tags" : [ "books" ],
+        "parameters" : [ {
+          "name" : "genre",
+          "in" : "path",
+          "description" : "Book genre",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Books of the genre.",
+            "schema" : {
+              "$ref" : "#/definitions/Genre"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Book" : {
+      "type" : "object",
+      "required" : [ "title", "author", "genre", "description", "miniature", "image" ],
+      "properties" : {
+        "title" : {
+          "type" : "string",
+          "example" : "Todesmärchen"
+        },
+        "author" : {
+          "type" : "string",
+          "example" : "Andreas Gruber"
+        },
+        "genre" : {
+          "type" : "string",
+          "example" : "Thriller"
+        },
+        "description" : {
+          "type" : "string",
+          "example" : "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer..."
+        },
+        "miniature" : {
+          "type" : "string",
+          "example" : "https://placehold.it/350x350"
+        },
+        "image" : {
+          "type" : "string",
+          "example" : "https://placehold.it/640x640"
+        }
+      }
+    },
+    "Books" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/Genre"
+      }
+    },
+    "Genre" : {
+      "type" : "object",
+      "properties" : {
+        "title" : {
+          "type" : "string",
+          "example" : "Thrillers"
+        },
+        "books" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Book"
+          }
+        }
+      }
+    }
+  }
+}
