@@ -18,6 +18,7 @@ import { ProfilePage } from '../pages/profile/profile';
 
 // Provider
 import { BookDataServiceProvider } from '../providers/book-data.service/book-data.service';
+import { AddBookProvider } from '../providers/add-book/add-book';
 
 // Ionic
 import { StatusBar } from '@ionic-native/status-bar';
@@ -66,6 +67,7 @@ import { AddBookManualComponent } from '../components/add-book-manual/add-book-m
       { provide: ErrorHandler, useClass: IonicErrorHandler },
       { provide: APP_CONFIG, useValue: AppConfig },
       BookDataServiceProvider,
+      AddBookProvider,
       BarcodeScanner
    ]
 })
