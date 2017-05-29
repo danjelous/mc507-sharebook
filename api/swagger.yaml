@@ -1,0 +1,131 @@
+---
+swagger: "2.0"
+info:
+  description: "The initial Sharebook API."
+  version: "1.0.0"
+  title: "Sharebook API"
+host: "localhost:7000"
+basePath: "/v1"
+tags:
+- name: "book"
+  description: "All single book operations."
+- name: "books"
+  description: "All multiple book operations."
+schemes:
+- "http"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /book:
+    post:
+      tags:
+      - "book"
+      summary: "Adds a book to the database."
+      operationId: "bookPOST"
+      parameters:
+      - in: "body"
+        name: "book"
+        description: "The book to add."
+        required: false
+        schema:
+          $ref: "#/definitions/Book"
+      responses:
+        200:
+          description: "OK"
+      x-swagger-router-controller: "Book"
+  /book/{id}:
+    get:
+      tags:
+      - "book"
+      summary: "Get a book by ID."
+      operationId: "bookIdGET"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "Book ID"
+        required: true
+        type: "integer"
+      responses:
+        200:
+          description: "The book."
+          schema:
+            $ref: "#/definitions/Book"
+      x-swagger-router-controller: "Book"
+  /books:
+    get:
+      tags:
+      - "books"
+      summary: "Overview display of books of different categories for the startpage."
+      operationId: "booksGET"
+      parameters: []
+      responses:
+        200:
+          description: "Some books of different categories for a preview."
+          schema:
+            $ref: "#/definitions/Books"
+      x-swagger-router-controller: "Books"
+  /books/{genre}:
+    get:
+      tags:
+      - "books"
+      summary: "Overview display of books from chosen genre."
+      operationId: "booksGenreGET"
+      parameters:
+      - name: "genre"
+        in: "path"
+        description: "Book genre"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "Books of the genre."
+          schema:
+            $ref: "#/definitions/Genre"
+      x-swagger-router-controller: "Books"
+definitions:
+  Book:
+    type: "object"
+    required:
+    - "author"
+    - "description"
+    - "genre"
+    - "image"
+    - "miniature"
+    - "title"
+    properties:
+      title:
+        type: "string"
+        example: "Todesmärchen"
+      author:
+        type: "string"
+        example: "Andreas Gruber"
+      genre:
+        type: "string"
+        example: "Thriller"
+      description:
+        type: "string"
+        example: "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden,\
+          \ in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie\
+          \ bleibt nicht sein einziges Opfer..."
+      miniature:
+        type: "string"
+        example: "https://placehold.it/350x350"
+      image:
+        type: "string"
+        example: "https://placehold.it/640x640"
+  Books:
+    type: "array"
+    items:
+      $ref: "#/definitions/Genre"
+  Genre:
+    type: "object"
+    properties:
+      title:
+        type: "string"
+        example: "Thrillers"
+      books:
+        type: "array"
+        items:
+          $ref: "#/definitions/Book"
