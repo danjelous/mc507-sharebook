@@ -1,41 +1,39 @@
+
 import { Injectable } from '@angular/core';
 import { Inject } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http } from '@angular/http';
 import { APP_CONFIG, IAppConfig } from '../../app/app.config';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-
 /*
-  Generated class for the AddBookProvider provider.
+  Generated class for the BooksOverviewProvider provider.
 
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
   for more info on providers and Angular 2 DI.
 */
 @Injectable()
-export class AddBookProvider {
+export class BooksOverviewProvider {
 
-  baseUrl: string;
+   baseUrl: string;
 
-   constructor( @Inject(APP_CONFIG) private config: IAppConfig, public http: Http) {
+  constructor( @Inject(APP_CONFIG) private config: IAppConfig, public http: Http) {
       this.baseUrl = config.customApiUrl;
    }
 
-  private handleError(error: any): Promise<any> {
+   private handleError(error: any): Promise<any> {
       console.error('An error occurred', error);
       return Promise.reject(error.message || error);
    }
 
-  private getHeaders(){
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return headers;
-  }
-   public addBook(book): Promise<Object> {
-     
-      return this.http.post(this.baseUrl + "book", JSON.stringify(book), {headers: this.getHeaders()})
+   public getBooksOverview(): Promise<Object> {
+      return this.http.get(this.baseUrl + "books")
          .toPromise()
          .then(response => response.json())
          .catch(this.handleError);
    }
+
 }
+
+
+

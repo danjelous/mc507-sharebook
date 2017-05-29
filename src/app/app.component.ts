@@ -16,7 +16,7 @@ import { TradesPage } from "../pages/trades/trades";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = AddBookPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 

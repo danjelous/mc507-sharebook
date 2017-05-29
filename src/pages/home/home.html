@@ -8,11 +8,12 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-list *ngFor="let genre of booksOverview" no-lines>
+    <p>{{genre.title}}</p>
+    <ion-list *ngFor="let books of genre.books" no-lines>
+      <ion-item>
+          <ion-img title="{{books.title}}" width="128" height="128" src="{{books.miniature}}"></ion-img>
+        </ion-item>
+    </ion-list>
+  </ion-list>
 </ion-content>
