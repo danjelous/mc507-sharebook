@@ -15,6 +15,7 @@ import { AddBookPage } from '../pages/add-book/add-book';
 import { EditprofilePage } from "../pages/editprofile/editprofile";
 import { ProfilePage } from '../pages/profile/profile';
 import { GenreOverviewPage } from '../pages/genre-overview/genre-overview';
+import { BookDetailsPage } from '../pages/book-details/book-details';
 
 // Provider
 import { BookDataServiceProvider } from '../providers/book-data.service/book-data.service';
@@ -30,6 +31,7 @@ import { AddbookconfirmationPage } from "../pages/addbookconfirmation/addbookcon
 import { BarcodeScanner } from "@ionic-native/barcode-scanner";
 import { AddBookManualComponent } from '../components/add-book-manual/add-book-manual';
 import { GenreOverviewProvider } from '../providers/genre-overview/genre-overview';
+import { BookDetailsProvider } from '../providers/book-details/book-details';
 
 @NgModule({
    declarations: [
@@ -42,6 +44,7 @@ import { GenreOverviewProvider } from '../providers/genre-overview/genre-overvie
       GenreOverviewPage,
       AddbookconfirmationPage,
       AddBookPage,
+      BookDetailsPage,
       AddBookSearchComponent,
       AddBookBarcodeComponent,
       AddBookManualComponent
@@ -58,6 +61,7 @@ import { GenreOverviewProvider } from '../providers/genre-overview/genre-overvie
       CollectionPage,
       TradesPage,
       GenreOverviewPage,
+      BookDetailsPage,
       EditprofilePage,
       ProfilePage,
       AddbookconfirmationPage,
@@ -72,7 +76,8 @@ import { GenreOverviewProvider } from '../providers/genre-overview/genre-overvie
       AddBookProvider,
       BarcodeScanner,
     BooksOverviewProvider,
-    GenreOverviewProvider
+    GenreOverviewProvider,
+    BookDetailsProvider
    ]
 })
 export class AppModule { }

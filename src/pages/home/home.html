@@ -12,7 +12,9 @@
     <a (click)="goToGenreOverview(genre.title)"><p>{{genre.title}}</p></a>
     <ion-list *ngFor="let book of genre.books" no-lines>
       <ion-item>
+          <a (click)="goToDetailsPage(book.title)">
           <ion-img title="{{book.title}}" width="128" height="128" src="{{book.miniature}}"></ion-img>
+          </a>
         </ion-item>
     </ion-list>
   </ion-list>

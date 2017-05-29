@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GenreOverviewProvider } from '../../providers/genre-overview/genre-overview';
+import { BookDetailsPage } from '../../pages/book-details/book-details';
 
 /**
  * Generated class for the GenreOverviewPage page.
@@ -29,6 +30,10 @@ export class GenreOverviewPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GenreOverviewPage');
+  }
+
+  goToDetailsPage(book) {
+    this.navCtrl.push(BookDetailsPage, book);
   }
 
 }
