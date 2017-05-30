@@ -10,27 +10,27 @@ import { BookDetailsProvider } from '../../providers/book-details/book-details';
  */
 @IonicPage()
 @Component({
-  selector: 'page-book-details',
-  templateUrl: 'book-details.html',
+   selector: 'page-book-details',
+   templateUrl: 'book-details.html',
 })
 export class BookDetailsPage {
 
-bookId : any
-bookData : any
+   bookId: any
+   bookData: any
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private bookDetailsProvider : BookDetailsProvider) {
-    this.bookId = navParams.data;
-    console.log(this.bookId);
-    //TODO only dummy id so far!
-    this.bookId = 121212;
-     this.bookDetailsProvider.getBookDetails(this.bookId).then(data => {
-        console.log(data);
-        this.bookData = data;
+   constructor(public navCtrl: NavController, public navParams: NavParams, private bookDetailsProvider: BookDetailsProvider) {
+      this.bookId = navParams.data;
+      console.log(this.bookId);
+
+      //TODO: bookId is ready, need API implementation to fetch book by ID
+      this.bookDetailsProvider.getBookDetails(this.bookId).then(data => {
+         console.log(data);
+         this.bookData = data;
       });
-  }
+   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BookDetailsPage');
-  }
+   ionViewDidLoad() {
+      console.log('ionViewDidLoad BookDetailsPage');
+   }
 
 }

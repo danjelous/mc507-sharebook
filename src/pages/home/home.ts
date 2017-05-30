@@ -21,6 +21,7 @@ export class HomePage {
   goToGenreOverview(genre) {
     this.navCtrl.push(GenreOverviewPage, genre);
   }
+
    goToDetailsPage(book) {
     this.navCtrl.push(BookDetailsPage, book);
   }

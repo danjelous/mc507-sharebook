@@ -32,7 +32,6 @@ export class BookDetailsProvider {
          .then(response => response.json())
          .catch(this.handleError);
    }
-
 }
 
 
