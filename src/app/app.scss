@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/v2/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -17,40 +16,48 @@
 
 $gutter-width: 50px;
 
+ion-row {
+    margin-top: $gutter-width / 2;
+}
+
 .paddingLeft {
-	padding-left: $gutter-width;
+    padding-left: $gutter-width;
 }
 
 .island {
-	margin-top: $gutter-width;
+    margin-top: $gutter-width;
 }
 
 .islandBottom {
-	margin-bottom: $gutter-width;
+    margin-bottom: $gutter-width;
 }
 
 .islandHalf {
-	margin-top: $gutter-width / 2;
+    margin-top: $gutter-width / 2;
 }
 
 .img-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .block {
-  display: block;
+    display: block;
 }
 
 .pull-right {
-   float: right;
+    float: right;
 }
 
 .pull-left {
-   float: left;
+    float: left;
 }
 
 .clear {
-   clear: both;
+    clear: both;
+}
+
+.text-center {
+    text-align: center;
 }

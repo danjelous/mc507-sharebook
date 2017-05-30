@@ -14,7 +14,6 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private booksOverviewProvider: BooksOverviewProvider) {
       this.booksOverviewProvider.getBooksOverview().then(data => {
-        console.log(data);
         this.booksOverview = data;
       });
   }

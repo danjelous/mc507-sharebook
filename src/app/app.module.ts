@@ -75,9 +75,9 @@ import { BookDetailsProvider } from '../providers/book-details/book-details';
       BookDataServiceProvider,
       AddBookProvider,
       BarcodeScanner,
-    BooksOverviewProvider,
-    GenreOverviewProvider,
-    BookDetailsProvider
+      BooksOverviewProvider,
+      GenreOverviewProvider,
+      BookDetailsProvider
    ]
 })
 export class AppModule { }
