@@ -6,21 +6,20 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>{{genre}} Overview</ion-title>
-  </ion-navbar>
+   <ion-navbar>
+      <ion-title>{{genre}} Overview</ion-title>
+   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-  <div *ngIf="genreOverview">
-    <ion-list *ngFor="let book of genreOverview.books" no-lines>
-      <ion-item>    
-          <a (click)="goToDetailsPage(book.title)">
-            <ion-img title="{{book.title}}" width="128" height="128" src="{{book.miniature}}"></ion-img>
-          </a>
-        </ion-item>
-    </ion-list>
-  </div>
+   <ion-grid>
+      <ion-row>
+         <ion-col col-6 *ngFor="let book of genreOverview" (click)="goToDetailsPage(book.title)">
+            <ion-img title="{{book.title}}" width="128" height="128" class="img-center" src="{{book.miniature}}"></ion-img>
+            <h4 class="text-center">{{book.title}}</h4>
+         </ion-col>
+         <h1 *ngIf="saySorry">Sorry, no books found for genre {{genre}} :(</h1>
+      </ion-row>
+   </ion-grid>
 </ion-content>

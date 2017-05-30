@@ -11,29 +11,28 @@ import { BookDetailsPage } from '../../pages/book-details/book-details';
  */
 @IonicPage()
 @Component({
-  selector: 'page-genre-overview',
-  templateUrl: 'genre-overview.html',
+   selector: 'page-genre-overview',
+   templateUrl: 'genre-overview.html',
 })
 export class GenreOverviewPage {
-  genreOverview : any
-  genre: any
+   genreOverview: any
+   genre: any
+   saySorry: Boolean = true; // Canadian style
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private genreOverviewProvider : GenreOverviewProvider) {
-    this.genre = navParams.data;
-    console.log(this.genre);
-    this.genreOverviewProvider.getGenreOverview(this.genre).then(data => {
-        console.log(data);
-        this.genreOverview = data;
-        console.log(this.genreOverview.books);
+   constructor(public navCtrl: NavController, public navParams: NavParams, private genreOverviewProvider: GenreOverviewProvider) {
+
+      this.genre = navParams.data;
+
+      this.genreOverviewProvider.getGenreOverview(this.genre).then(data => {
+
+         if (data['books']) {
+            this.saySorry = false;
+            this.genreOverview = data['books'];
+         }
       });
-  }
+   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GenreOverviewPage');
-  }
-
-  goToDetailsPage(book) {
-    this.navCtrl.push(BookDetailsPage, book);
-  }
-
+   goToDetailsPage(book) {
+      this.navCtrl.push(BookDetailsPage, book);
+   }
 }
