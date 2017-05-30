@@ -12,7 +12,8 @@ exports.bookIdGET = function (args, res, next) {
     "genre": "Thriller",
     "miniature": "https://placehold.it/128x128",
     "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-    "title": "Todesmärchen"
+    "title": "Todesmärchen " + args.id.value,
+    "id": args.id.value
   };
   if (Object.keys(examples).length > 0) {
     res.setHeader('Content-Type', 'application/json');
