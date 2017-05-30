@@ -15,7 +15,7 @@
 <ion-content padding>
    <ion-grid>
       <ion-row>
-         <ion-col col-6 *ngFor="let book of genreOverview" (click)="goToDetailsPage(book.title)">
+         <ion-col col-6 *ngFor="let book of genreOverview" (click)="goToDetailsPage(book.id)">
             <ion-img title="{{book.title}}" width="128" height="128" class="img-center" src="{{book.miniature}}"></ion-img>
             <h4 class="text-center">{{book.title}}</h4>
          </ion-col>
