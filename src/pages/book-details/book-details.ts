@@ -22,7 +22,6 @@ export class BookDetailsPage {
       this.bookId = navParams.data;
       console.log(this.bookId);
 
-      //TODO: bookId is ready, need API implementation to fetch book by ID
       this.bookDetailsProvider.getBookDetails(this.bookId).then(data => {
          console.log(data);
          this.bookData = data;
