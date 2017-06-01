@@ -15,8 +15,8 @@ exports.booksGET = function (args, res, next) {
           "author": "Andreas Gruber",
           "genre": "Thriller",
           "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-          "miniature": "https://placehold.it/128x128",
-          "image": "https://placehold.it/640x640"
+          "miniature": "https://lorempixel.com/128/128/business",
+          "image": "https://lorempixel.com/640/640/business"
         },
         {
           "id": 2,
@@ -24,8 +24,8 @@ exports.booksGET = function (args, res, next) {
           "author": "Andreas Gruber",
           "genre": "Thriller",
           "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-          "miniature": "https://placehold.it/128x128",
-          "image": "https://placehold.it/640x640"
+          "miniature": "https://lorempixel.com/128/128/city",
+          "image": "https://lorempixel.com/640/640/city"
         },
         {
           "id": 3,
@@ -33,8 +33,8 @@ exports.booksGET = function (args, res, next) {
           "author": "Andreas Gruber",
           "genre": "Thriller",
           "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-          "miniature": "https://placehold.it/128x128",
-          "image": "https://placehold.it/640x640"
+          "miniature": "https://lorempixel.com/128/128/sports",
+          "image": "https://lorempixel.com/640/640/sports"
         }
       ]
     },
@@ -47,8 +47,8 @@ exports.booksGET = function (args, res, next) {
           "author": "Andreas Gruber",
           "genre": "Thriller",
           "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-          "miniature": "https://placehold.it/128x128",
-          "image": "https://placehold.it/640x640"
+          "miniature": "https://lorempixel.com/128/128/food",
+          "image": "https://lorempixel.com/640/640/food"
         }
       ]
     },
@@ -61,8 +61,8 @@ exports.booksGET = function (args, res, next) {
           "author": "Andreas Gruber",
           "genre": "Thriller",
           "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-          "miniature": "https://placehold.it/128x128",
-          "image": "https://placehold.it/640x640"
+          "miniature": "https://lorempixel.com/128/128/transport",
+          "image": "https://lorempixel.com/640/640/transport"
         }
       ]
     }
@@ -88,56 +88,56 @@ exports.booksGenreGET = function (args, res, next) {
 
     examples['application/json'] = {
       "books": [{
-        "image": "https://placehold.it/640x640",
         "author": "Andreas Gruber",
         "genre": "Thriller",
-        "miniature": "https://placehold.it/128x128",
         "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
         "title": "Todesmärchen 1",
-        "id": 1
+        "id": 1,
+        "miniature": "https://lorempixel.com/128/128/city",
+        "image": "https://lorempixel.com/640/640/city"
       },
       {
         "id": 2,
-        "image": "https://placehold.it/640x640",
         "author": "Andreas Gruber",
         "genre": "Thriller",
-        "miniature": "https://placehold.it/128x128",
         "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-        "title": "Todesmärchen 2"
+        "title": "Todesmärchen 2",
+        "miniature": "https://lorempixel.com/128/128/abstract",
+        "image": "https://lorempixel.com/640/640/abstract"
       },
       {
         "id": 3,
-        "image": "https://placehold.it/640x640",
         "author": "Andreas Gruber",
         "genre": "Thriller",
-        "miniature": "https://placehold.it/128x128",
         "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-        "title": "Todesmärchen 3"
+        "title": "Todesmärchen 3",
+        "miniature": "https://lorempixel.com/128/128/food",
+        "image": "https://lorempixel.com/640/640/food"
       },
       {
         "id": 4,
-        "image": "https://placehold.it/640x640",
         "author": "Andreas Gruber",
         "genre": "Thriller",
-        "miniature": "https://placehold.it/128x128",
         "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-        "title": "Todesmärchen 4"
+        "title": "Todesmärchen 4",
+        "miniature": "https://lorempixel.com/128/128/nature",
+        "image": "https://lorempixel.com/640/640/nature"
       }, {
         "id": 5,
-        "image": "https://placehold.it/640x640",
         "author": "Andreas Gruber",
         "genre": "Thriller",
-        "miniature": "https://placehold.it/128x128",
         "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-        "title": "Todesmärchen 5"
+        "title": "Todesmärchen 5",
+        "miniature": "https://lorempixel.com/128/128/people",
+        "image": "https://lorempixel.com/640/640/people"
       }, {
         "id": 6,
-        "image": "https://placehold.it/640x640",
         "author": "Andreas Gruber",
         "genre": "Thriller",
-        "miniature": "https://placehold.it/128x128",
         "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
-        "title": "Todesmärchen 6"
+        "title": "Todesmärchen 6",
+        "miniature": "https://lorempixel.com/128/128/animals",
+        "image": "https://lorempixel.com/640/640/animals"
       }],
       "title": "Thrillers"
     };

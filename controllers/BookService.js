@@ -7,13 +7,13 @@ exports.bookIdGET = function (args, res, next) {
   **/
   var examples = {};
   examples['application/json'] = {
-    "image": "https://placehold.it/640x640",
     "author": "Andreas Gruber",
     "genre": "Thriller",
-    "miniature": "https://placehold.it/128x128",
     "description": "In Bern wird die kunstvoll drapierte Leiche einer Frau gefunden, in deren Haut der Mörder ein geheimnisvolles Zeichen geritzt hat. Sie bleibt nicht sein einziges Opfer...",
     "title": "Todesmärchen " + args.id.value,
-    "id": args.id.value
+    "id": args.id.value,
+    "miniature": "https://lorempixel.com/128/128/abstract",
+    "image": "https://lorempixel.com/640/640/abstract"
   };
   if (Object.keys(examples).length > 0) {
     res.setHeader('Content-Type', 'application/json');
