@@ -1,20 +1,22 @@
-<!--
-  Generated template for the CollectionPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
- <ion-navbar>
+   <ion-navbar>
       <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
       <ion-title>Collection</ion-title>
    </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+
+   <ion-row *ngFor="let genre of booksOverview">
+      <ion-col col-12>
+         <h2 color="primary" (click)="goToGenreOverview(genre.title)">{{genre.title}}</h2>
+      </ion-col>
+      <ion-col col-6 *ngFor="let book of genre.books" (click)="goToDetailsPage(book.id)" class="genre-{{genre}}">
+         <ion-img title="{{book.title}}" width="128" height="128" class="img-center" src="{{book.miniature}}"></ion-img>
+         <h4 class="text-center">{{book.title}}</h4>
+      </ion-col>
+   </ion-row>
 
 </ion-content>
