@@ -1,32 +1,20 @@
-<!--
-  Generated template for the BookDetailsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Book Details</ion-title>
-  </ion-navbar>
-
+   <ion-navbar>
+      <ion-title>Book Details</ion-title>
+   </ion-navbar>
 </ion-header>
-
 
 <ion-content padding>
    <div *ngIf="bookData">
-      <h4>Title</h4>
-      <p>{{bookData.title}}</p>
+      <h2 class="text-center">{{bookData.title}}</h2>
+      <p class="text-center">written by <strong>{{bookData.author}}</strong></p>
 
-      <h4 class="title">Author</h4>
-      <p>{{bookData.author}}</p>
-
-      <img width="128" height="auto" src="{{bookData.miniature}}">
+      <img src="{{bookData.image}}">
 
       <h4 class="title">Genre</h4>
-        <p>{{bookData.genre}}</p>
+      <p>{{bookData.genre}}</p>
 
       <h4 class="title">Description</h4>
-        <p>{{bookData.description}}</p>
-  </div>
+      <p>{{bookData.description}}</p>
+   </div>
 </ion-content>
