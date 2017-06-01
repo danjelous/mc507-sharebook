@@ -8,8 +8,10 @@
 </ion-header>
 
 <ion-content padding>
-   <ion-grid>
 
+   <h2 *ngIf="addedBook" class="add-book__confirmation">Added book "{{addedBook}}" successfully!</h2>
+
+   <ion-grid>
       <ion-row *ngFor="let genre of booksOverview">
          <ion-col col-12>
             <h2 color="primary" (click)="goToGenreOverview(genre.title)">{{genre.title}}</h2>
@@ -19,6 +21,5 @@
             <h4 class="text-center">{{book.title}}</h4>
          </ion-col>
       </ion-row>
-
    </ion-grid>
 </ion-content>
