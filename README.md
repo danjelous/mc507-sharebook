@@ -88,5 +88,6 @@ This section contains links to all relevant project artefacts. For the last two 
 * [UI Mocks](documents/mock-presentation.pdf), [Ionic Creator](http://ionic.io/products/creator)
 * Code is living in `src`
 * [Project Poster](documents/poster.pdf)
+* [Final Presentation Slides](documents/presentations/final.pdf)
 * [Ionic CLI Description](http://ionicframework.com/docs/cli/)
 * [Ionic Components](http://ionicframework.com/docs/components/)
