@@ -9,7 +9,7 @@ export interface IAppConfig {
 }
 
 export const AppConfig: IAppConfig = {
-   customApiUrl: 'http://localhost:7000/v1/',
+   customApiUrl: 'http://10.29.19.210:7000/v1/',
    googleBooksApiUrl: 'https://www.googleapis.com/books/v1/volumes',
    googleBooksApiKey: 'AIzaSyAFSU7He_M_dkwy-exLXrbdhTLffTO5_YQ'
 };

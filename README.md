@@ -86,10 +86,7 @@ This section contains links to all relevant project artefacts. For the last two 
 * [Project Proposal](documents/XPD_Proposal.pdf)
 * [UI Sketches](documents/presentations/ShareBook_myBalsamiq_Mockups.pdf), [MyBalsamiq](https://www.mybalsamiq.com)
 * [UI Mocks](documents/mock-presentation.pdf), [Ionic Creator](http://ionic.io/products/creator)
-* [Peer Talk Slides](documents/peer-talk.pdf)
-* [Final Project Presentation](documents/final-presentation.pdf)
-* Code is (mainly) living in `www`
-* [Project Video](https://www.youtube.com/embed/gGOXMWGVwDg)
+* Code is living in `src`
 * [Project Poster](documents/poster.pdf)
 * [Ionic CLI Description](http://ionicframework.com/docs/cli/)
 * [Ionic Components](http://ionicframework.com/docs/components/)
